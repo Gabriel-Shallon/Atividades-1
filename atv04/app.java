@@ -9,12 +9,14 @@ public class app {
         double nota[] = new double[4];
         double atitudinal;
         
+        
         atitudinal = Double.parseDouble(JOptionPane.showInputDialog(null, "Qual foi a nota do atitudinal?"));
         MediaNota mediaNota = new MediaNota(nota, atitudinal);
         
         double media = mediaNota.media();
+        String status = mediaNota.status();
         JOptionPane.showMessageDialog(null, String.format("A média é = %.2f", media));
-
+        JOptionPane.showMessageDialog(null, status);
     }
 
 }
